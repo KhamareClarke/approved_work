@@ -1597,12 +1597,12 @@ export default function ClientDashboardPage() {
 
           {/* Database Chat System for Client-Tradesperson conversations */}
           {user && showChat && (
-            <DatabaseChatSystem
+          <DatabaseChatSystem
               userId={user.id}
-              userType="client"
-              isOpen={showChat}
-              onClose={() => setShowChat(false)}
-            />
+            userType="client"
+            isOpen={showChat}
+            onClose={() => setShowChat(false)}
+          />
           )}
 
           {/* AI Support Chat */}
@@ -1610,7 +1610,7 @@ export default function ClientDashboardPage() {
             <AISupportChat
               userId={user.id}
               userType="client"
-              userName={`${user.user_metadata?.first_name || ''} ${user.user_metadata?.last_name || ''}`.trim() || user.email}
+              userName={user.email || 'Client'}
             />
           )}
         </div>
