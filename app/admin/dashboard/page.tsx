@@ -306,7 +306,6 @@ export default function AdminDashboardPage() {
         })) || [];
         
         setSubmittedJobs(jobsWithClientInfo);
-        setTotalJobsPages(data.data.pagination.totalPages || 1);
       }
     } catch (err) {
       console.error("Error loading submitted jobs:", err);
