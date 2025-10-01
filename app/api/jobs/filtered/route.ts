@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 // Simple postcode distance calculation (UK postcodes)
 function calculatePostcodeDistance(postcode1: string, postcode2: string): number {
   // Extract first part of postcode (e.g., "SW1A" from "SW1A 1AA")

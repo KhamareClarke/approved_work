@@ -32,7 +32,11 @@ export default function SetupCRMPage() {
   // OAuth configuration (these should come from environment variables)
   const clientId = process.env.NEXT_PUBLIC_GOHIGHLEVEL_CLIENT_ID || "";
   const clientSecret = process.env.NEXT_PUBLIC_GOHIGHLEVEL_CLIENT_SECRET || "";
-  const redirectUri = process.env.NEXT_PUBLIC_GOHIGHLEVEL_REDIRECT_URI || `${window.location.origin}/api/crm/oauth/callback`;
+  const [redirectUri, setRedirectUri] = useState<string>('');
+  
+  useEffect(() => {
+    setRedirectUri(process.env.NEXT_PUBLIC_GOHIGHLEVEL_REDIRECT_URI || `${window.location.origin}/api/crm/oauth/callback`);
+  }, []);
 
   useEffect(() => {
     // Generate authorization URL when component mounts

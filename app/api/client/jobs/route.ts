@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase";
+
+export const dynamic = 'force-dynamic';
 import { PostgrestQueryBuilder } from "@supabase/postgrest-js";
 
 export async function GET(request: NextRequest) {
