@@ -933,7 +933,7 @@ export default function AdminDashboardPage() {
                         </TableCell>
                         <TableCell>
                           <div className="text-sm text-gray-500">
-                            {new Date(application.created_at).toLocaleDateString()}
+                            {new Date(application.applied_at).toLocaleDateString()}
                           </div>
                         </TableCell>
                         <TableCell>
