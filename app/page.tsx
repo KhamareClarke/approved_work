@@ -53,8 +53,6 @@ import "./recommended-scrollbar.css";
 import SmartSearchBar from "../components/SmartSearchBar";
 import TabsSection from "../components/TabsSection";
 import TrendingCategoriesSection from "../components/TrendingCategoriesSection";
-import AuthorityTrustSection from "../components/AuthorityTrustSection";
-import CostGuidesSection from "../components/CostGuidesSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -1184,12 +1182,6 @@ export default function Home() {
       
 
       <TrendingCategoriesSection />
-
-      {/* PREMIUM: Authority & Trust Section */}
-      <AuthorityTrustSection />
-
-      {/* PREMIUM: Cost Guides & Tips Section */}
-      <CostGuidesSection />
 
       {/* Recommended Jobs (upgraded) */}
       <section className="py-14 bg-gradient-to-br from-blue-50 via-white to-yellow-50">
