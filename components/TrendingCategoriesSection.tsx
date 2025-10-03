@@ -99,29 +99,21 @@ const TrendingCategoriesSection = () => {
   }, [emblaApi, isHovering]);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* ULTIMATE Header */}
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Premium Services Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 rounded-full px-4 py-2 text-sm font-bold text-red-600 mb-6">
-            🔥 <span>Most Booked Today</span>
-          </div>
           <h2 className="text-5xl font-black text-gray-900 mb-6 leading-tight">
-            Get Instant Quotes
+            Most Popular Services in Your Area
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From verified professionals in your area
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Connect with verified professionals for the services you need most
           </p>
         </div>
-        <div className="relative mt-2">
-          <div
-            className="overflow-hidden"
-            ref={emblaRef}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-          >
-            <div className="flex gap-5">
-              {displayed.map((category, index) => {
+
+        {/* Premium 2x3 Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {displayed.map((category, index) => {
               let TradeIcon: any = null;
               let MiniIcon: any = null;
               switch (category.name) {
