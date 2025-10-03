@@ -53,6 +53,8 @@ import "./recommended-scrollbar.css";
 import SmartSearchBar from "../components/SmartSearchBar";
 import TabsSection from "../components/TabsSection";
 import TrendingCategoriesSection from "../components/TrendingCategoriesSection";
+import AuthorityTrustSection from "../components/AuthorityTrustSection";
+import CostGuidesSection from "../components/CostGuidesSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -967,61 +969,56 @@ export default function Home() {
     <div suppressHydrationWarning>
       <CookieConsent />
       <FloatingAssistant mode="home" />
-      {/* PREMIUM LIFESTYLE HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Premium Background with Lifestyle Photography */}
-        <div className="absolute inset-0">
-          <img
-            src="/hero.png"
-            alt="Professional tradespeople working with satisfied homeowners"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/70 to-blue-900/80"></div>
-        </div>
+      {/* Gold Standard Professional Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 text-white overflow-hidden">
+        {/* Clean Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-800/95"></div>
         
-        {/* Premium Trust Bar */}
-        <div className="absolute top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm z-20">
+        {/* Streamlined Trust Bar */}
+        <div className="bg-white/10 backdrop-blur-sm border-b border-white/20">
           <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-center gap-12 text-sm font-semibold text-gray-700">
+            <div className="flex items-center justify-center gap-12 text-sm font-semibold">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                   <Shield className="w-4 h-4 text-white" />
                 </div>
-                <span>10,000+ Verified Pros</span>
+                <span className="text-white">✅ 10,000+ Verified</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                   <Star className="w-4 h-4 text-white" />
                 </div>
-                <span>4.9★ Rating</span>
+                <span className="text-white">⭐ 4.9/5 Rating</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                   <CheckCircle className="w-4 h-4 text-white" />
                 </div>
-                <span>£2M+ Insured</span>
+                <span className="text-white">🛡️ £2M+ Insured</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* PREMIUM HERO CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center text-white">
-          
-          {/* Premium Headline */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <h1 className="text-6xl lg:text-7xl font-black leading-tight mb-8">
-              <span className="block text-white">Hire Trusted Local</span>
-              <span className="block text-yellow-400 mt-2">Tradespeople</span>
-            </h1>
+        {/* Main Content */}
+        <div className="relative max-w-6xl mx-auto px-6 py-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             
-            <p className="text-3xl lg:text-4xl font-bold text-blue-100 mb-8">
-              Get Quotes in 60 Seconds
-            </p>
-            
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed mb-12">
-              Verified, insured, and reviewed by <span className="text-yellow-300 font-bold">50,000+ customers</span>
-            </p>
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-5 py-2.5 text-sm font-semibold text-yellow-300">
+                <Award className="w-4 h-4" />
+                <span>🇬🇧 UK's #1 Trusted Tradesperson Platform</span>
+              </div>
+
+              {/* Headline */}
+              <div>
+                <h1 className="text-5xl lg:text-6xl font-black leading-tight mb-6">
+                  <span className="block text-white">Hire Trusted Local</span>
+                  <span className="block text-yellow-400 mt-1">Tradespeople</span>
+                  <span className="block text-blue-100 text-4xl lg:text-5xl mt-2">Get Quotes in 60 Seconds</span>
+                </h1>
                 
                 {/* Social Proof */}
                 <div className="flex items-center gap-4 mt-6">
@@ -1046,42 +1043,54 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Subtitle */}
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Get instant quotes from <span className="text-yellow-300 font-semibold">verified, insured professionals</span> in your area. 
-                <span className="block mt-2 text-lg">✅ No cowboy builders • ✅ No hidden fees • ✅ No hassle</span>
-              </p>
+              {/* Enhanced Subtitle with Reassuring Microcopy */}
+              <div className="space-y-4">
+                <p className="text-xl text-blue-100 leading-relaxed">
+                  Connect with <span className="text-yellow-300 font-semibold">verified, insured professionals</span> in your area
+                </p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                  <p className="text-blue-200 font-medium text-center">
+                    ✅ No hidden fees • ✅ No cowboy builders • ✅ 100% free to use
+                  </p>
+                </div>
+              </div>
 
-              {/* CTA */}
+              {/* Single Clear CTA - Conversion Optimized */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="bg-white rounded-xl shadow-xl p-6 cursor-pointer group hover:shadow-2xl transition-all duration-300">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                          <Search className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-gray-900">🎯 Get Your FREE Quote</h3>
-                          <p className="text-gray-600 text-sm">⚡ Instant AI matching • 🛡️ No obligation • 🚀 60s response</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-green-600">100% FREE</div>
-                        <div className="text-xs text-gray-500 font-medium">💰 No hidden fees ever</div>
-                      </div>
+                  <div className="bg-white rounded-2xl shadow-2xl p-8 cursor-pointer group hover:shadow-3xl transition-all duration-300 border-4 border-orange-400/20 hover:border-orange-400/40">
+                    <div className="text-center mb-6">
+                      <h3 className="text-3xl font-black text-gray-900 mb-2">Get My Free Quote</h3>
+                      <p className="text-gray-600 text-lg">Takes less than 60 seconds • No obligation</p>
                     </div>
                     
-                    <div className="flex items-center bg-gray-50 rounded-lg p-4 group-hover:bg-blue-50 transition-colors">
+                    <div className="flex items-center bg-gray-50 rounded-xl p-6 group-hover:bg-orange-50 transition-colors mb-6 border-2 border-gray-200 group-hover:border-orange-200">
+                      <Search className="w-6 h-6 text-gray-400 mr-4" />
                       <input
                         type="text"
                         placeholder={typed || typingPhrases[phraseIndex]}
-                        className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none font-medium"
+                        className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-lg font-medium"
                         readOnly
                       />
-                      <Button className="ml-4 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-blue-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
-                        🚀 Get Quotes Now →
-                      </Button>
+                    </div>
+                    
+                    <Button className="w-full h-16 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-black text-xl rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                      Get Free Quotes Now →
+                    </Button>
+                    
+                    <div className="flex items-center justify-center gap-6 mt-6 text-sm text-gray-600">
+                      <span className="flex items-center gap-1">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        100% Free
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4 text-blue-500" />
+                        Instant Matching
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Shield className="w-4 h-4 text-purple-500" />
+                        Fully Insured
+                      </span>
                     </div>
                   </div>
                 </DialogTrigger>
@@ -1179,9 +1188,74 @@ export default function Home() {
         </div>
       </section>
 
-      
+      {/* SEO Enhancement - LocalBusiness Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "MyApproved",
+            "description": "UK's #1 trusted platform to hire verified local tradespeople. Get instant quotes from insured professionals in your area.",
+            "url": "https://myapproved.co.uk",
+            "telephone": "+44-800-123-4567",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "GB",
+              "addressRegion": "England"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "50000",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "serviceArea": {
+              "@type": "Country",
+              "name": "United Kingdom"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Tradesperson Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Plumbing Services",
+                    "description": "Professional plumbing services from verified tradespeople"
+                  }
+                },
+                {
+                  "@type": "Offer", 
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Electrical Services",
+                    "description": "Certified electricians for all electrical work"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service", 
+                    "name": "Building Services",
+                    "description": "Qualified builders for construction and renovation"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
 
       <TrendingCategoriesSection />
+
+      {/* PREMIUM: Authority & Trust Section */}
+      <AuthorityTrustSection />
+
+      {/* PREMIUM: Cost Guides & Tips Section */}
+      <CostGuidesSection />
 
       {/* Recommended Jobs (upgraded) */}
       <section className="py-14 bg-gradient-to-br from-blue-50 via-white to-yellow-50">
